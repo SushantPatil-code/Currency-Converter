@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Translator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💱 Currency Translator</h1>
+            <p>Convert currencies with real-time exchange rates</p>
+        </div>
+
+        <form class="converter-form" id="converterForm">
+            <div class="input-group">
+                <label for="fromAmount">Amount</label>
+                <div class="input-row">
+                    <input type="number" id="fromAmount" placeholder="Enter amount" step="0.01" min="0" required>
+                    <select id="fromCurrency" required>
+                        <option value="">Select Currency</option>
+                        <option value="USD">🇺🇸 USD - US Dollar</option>
+                        <option value="EUR">🇪🇺 EUR - Euro</option>
+                        <option value="GBP">🇬🇧 GBP - British Pound</option>
+                        <option value="JPY">🇯🇵 JPY - Japanese Yen</option>
+                        <option value="AUD">🇦🇺 AUD - Australian Dollar</option>
+                        <option value="CAD">🇨🇦 CAD - Canadian Dollar</option>
+                        <option value="CHF">🇨🇭 CHF - Swiss Franc</option>
+                        <option value="CNY">🇨🇳 CNY - Chinese Yuan</option>
+                        <option value="INR">🇮🇳 INR - Indian Rupee</option>
+                        <option value="KRW">🇰🇷 KRW - South Korean Won</option>
+                        <option value="SGD">🇸🇬 SGD - Singapore Dollar</option>
+                        <option value="NOK">🇳🇴 NOK - Norwegian Krone</option>
+                        <option value="MXN">🇲🇽 MXN - Mexican Peso</option>
+                        <option value="ZAR">🇿🇦 ZAR - South African Rand</option>
+                        <option value="BRL">🇧🇷 BRL - Brazilian Real</option>
+                        <option value="RUB">🇷🇺 RUB - Russian Ruble</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="button" class="swap-btn" id="swapBtn" title="Swap currencies">⇅</button>
+
+            <div class="input-group">
+                <label for="toCurrency">To</label>
+                <select id="toCurrency" required>
+                    <option value="">Select Currency</option>
+                    <option value="USD">🇺🇸 USD - US Dollar</option>
+                    <option value="EUR">🇪🇺 EUR - Euro</option>
+                    <option value="GBP">🇬🇧 GBP - British Pound</option>
+                    <option value="JPY">🇯🇵 JPY - Japanese Yen</option>
+                    <option value="AUD">🇦🇺 AUD - Australian Dollar</option>
+                    <option value="CAD">🇨🇦 CAD - Canadian Dollar</option>
+                    <option value="CHF">🇨🇭 CHF - Swiss Franc</option>
+                    <option value="CNY">🇨🇳 CNY - Chinese Yuan</option>
+                    <option value="INR">🇮🇳 INR - Indian Rupee</option>
+                    <option value="KRW">🇰🇷 KRW - South Korean Won</option>
+                    <option value="SGD">🇸🇬 SGD - Singapore Dollar</option>
+                    <option value="NOK">🇳🇴 NOK - Norwegian Krone</option>
+                    <option value="MXN">🇲🇽 MXN - Mexican Peso</option>
+                    <option value="ZAR">🇿🇦 ZAR - South African Rand</option>
+                    <option value="BRL">🇧🇷 BRL - Brazilian Real</option>
+                    <option value="RUB">🇷🇺 RUB - Russian Ruble</option>
+                </select>
+            </div>
+
+            <button type="submit" class="convert-btn">Convert Currency</button>
+        </form>
+
+        <div class="loading" id="loading">
+            Converting... 💫
+        </div>
+
+        <div class="error" id="error"></div>
+
+        <div class="result" id="result" style="display: none;">
+            <div class="result-amount" id="resultAmount"></div>
+            <div class="result-text" id="resultText"></div>
+            <div class="rate-info" id="rateInfo"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
